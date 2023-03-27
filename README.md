@@ -6,4 +6,3 @@ more testing
 save artifact
 artifact
 more artifact
-save changes
