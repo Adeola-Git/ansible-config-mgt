@@ -11,6 +11,8 @@
         state: latest
     
 
+
+
 - name: update LB and db server
   hosts: lb, db
   remote_user: ubuntu
@@ -25,3 +27,4 @@
       apt:
         name: wireshark
         state: latest
+        
