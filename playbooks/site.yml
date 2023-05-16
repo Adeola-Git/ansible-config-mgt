@@ -5,6 +5,17 @@
 - hosts: uat-webservers
 - import_playbook: ../static-assignments/uat-webservers.yml
 
+- hosts: include env-vars file
+- import_playbook: ../dynamic-assignments/env-vars.yml
+  tags:
+    - always
+
+- name: import database file
+- import_playbook: ../static-assignments/db.yml
+
+- name: import webservers file
+- import_playbook: ../static-assignments/uat-webservers.yml
+
  - name: Loadbalancers assignment
        hosts: lb
          - import_playbook: ../static-assignments/loadbalancers.yml
