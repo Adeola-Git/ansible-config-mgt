@@ -1,5 +1,5 @@
 ---
-- hosts: uat-webservers
+- hosts: db
   roles:
      - webserver
   become: true
